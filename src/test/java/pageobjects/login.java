@@ -22,10 +22,10 @@ public class login extends DriverSetup {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement email = driver.findElement(By.xpath("//input[@id = 'ap_email']"));
 		wait.until(ExpectedConditions.visibilityOf(email));
-		email.sendKeys(""); //enter Email
+		email.sendKeys("sai8179kumar@gmail.com"); //enter Email
 		driver.findElement(By.id("continue")).click();
 		WebElement password = driver.findElement(By.xpath("//input[@id = 'ap_password']"));
-		password.sendKeys(""); //enter password
+		password.sendKeys("Amazon1@1"); //enter password
 		driver.findElement(By.xpath("//input[@id = 'signInSubmit']")).click();
 		driver.findElement(By.xpath("//input[@type = 'text']")).sendKeys("zebronics wired headphones", Keys.ENTER);
 		WebElement addToCart = driver.findElement(By.xpath("(//button[@type = 'button'])[1]"));
@@ -35,7 +35,6 @@ public class login extends DriverSetup {
 		wait.until(ExpectedConditions.visibilityOf(gotoCart));
 		gotoCart.click();
 		
-		// input[@name = 'proceedToRetailCheckout']
 		WebElement Checkout = driver.findElement(By.xpath("//input[@name = 'proceedToRetailCheckout']"));
 		Checkout.click();
 
@@ -43,9 +42,7 @@ public class login extends DriverSetup {
 				.findElement(By.xpath("(//input[@type = 'submit' and @class = 'a-button-input'])[last()]"));
 		address.click();
 
-//		WebElement payment = driver.findElement(By.xpath("//input[@id = 'pp-XJ3b7Y-166']"));
-//		wait.until(ExpectedConditions.visibilityOf(payment));
-//		payment.click();
+
 	}
 
 }
